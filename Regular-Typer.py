@@ -35,8 +35,6 @@ def play():
     correctas = miFuente.render("Palabras correctas: "+repr(wordsCorrect),True,(50,70,80))
     nivel = miFuente.render("Nivel: "+repr(countLevel),True,(50,70,80))
     creditos = miFuente.render("Creado por Isabella Callejas, Angel Ortega y Juan Sepulveda",True,(50,70,80))
-    perder = miFuente.render("The game is over, you lose :(, palabras correctas: "+repr(wordsCorrect),True,(50,70,80))
-    ganar = miFuente.render("The game is over, you win :D, palabras correctas: "+repr(wordsCorrect),True,(50,70,80))
     texto = ""
     playerAnswer = ""
     screen.fill(white) #Background
@@ -64,6 +62,7 @@ def play():
                         playerAnswer= texto
                         if playerAnswer == z:
                             wordsCorrect+=1
+                            correctas = miFuente.render("Palabras correctas: "+repr(wordsCorrect),True,(50,70,80))
                             screen.blit(correctas,(330,80))
                             if wordsCorrect == 3:
                                 a+=1
@@ -71,6 +70,7 @@ def play():
                                 wordsCorrect=0
                                 countLevel+=1
                         else:
+                            perder = miFuente.render("The game is over, you lose :(, palabras correctas: "+repr(wordsCorrect),True,(50,70,80))
                             screen.blit(perder,(330,400))
                             countLevel = 5
                         texto = ""
@@ -79,6 +79,7 @@ def play():
                     '''if event.key == pygame.K_ESCAPE:
                         mainMenu()'''
                 if countLevel == 4:
+                    ganar = miFuente.render("The game is over, you win :D, palabras correctas: "+repr(wordsCorrect),True,(50,70,80))
                     screen.blit(ganar,(330,400))
             user_txt = miFuente.render(texto,True,(50,70,80))
             screen.blit(user_txt,(330,200))
