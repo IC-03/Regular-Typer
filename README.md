@@ -1,5 +1,5 @@
 #  { Regular-Typer }
-- falta una pic guapa acá chill - 
+<img src="logo.jpg">
 
 ## 🎮 Objetivo:
 
