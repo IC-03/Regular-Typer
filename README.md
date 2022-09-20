@@ -1,5 +1,5 @@
 #  { Regular-Typer }
-<img src="Regular-Typer-Logo.png">
+<img src="Regular-Typer-Logo2.png">
 
 ## 🎮 Objetivo:
 
